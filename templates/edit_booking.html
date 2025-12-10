@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h2>Edit Booking</h2>
+    <div class="form-box_edit">
+        <form method="POST">
+            <label>Name:</label>
+            <input type="text" name="name" value="{{ booking['name'] }}" required>
+            <label>Email:</label>
+            <input type="email" name="email" value="{{ booking['email'] }}" required>
+            <label>Date:</label>
+            <input type="date" name="date" value="{{ booking['date'] }}" required>
+            <label>Tickets:</label>
+            <input type="number" name="tickets" value="{{ booking['tickets'] }}" required>
+            <label>Ticket Type:</label>
+            <select name="ticket_type" required>
+                <option value="Single" {% if booking['ticket_type']=='Single' %}selected{% endif %}>Single</option>
+                <option value="Child" {% if booking['ticket_type']=='Child' %}selected{% endif %}>Child</option>
+                <option value="Family" {% if booking['ticket_type']=='Family' %}selected{% endif %}>Family</option>
+                <option value="Education" {% if booking['ticket_type']=='Education' %}selected{% endif %}>Education</option>
+            </select>
+            <button type="submit">Update Booking</button>
+        </form>
+    </div>
+
+{% endblock %}
+ 
+Login
+ 

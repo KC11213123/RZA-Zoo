@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }}</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='style_booking.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='style_about.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='style_account.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='style_education.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='style_login.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='style_register.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='style_edit_book.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='style_animals_fact.css')}}">
+</head>
+<body>
+ 
+
+
+    <nav>
+        <ul>
+            <div class="logo-pos">    
+                <img src="{{url_for('static', filename='images/rza_zoo_logo.png')}}" width="10%">
+            </div>
+            <li><a href="{{ url_for('home') }}">Home</a></li>
+            <li><a href="{{ url_for('about') }}">About</a></li>
+            <li><a href="{{ url_for('booking') }}">Booking</a></li>
+            <li><a href="{{ url_for('education') }}">Education</a></li>
+                {% if current_user.is_authenticated %}
+            <li><a href="{{ url_for('account') }}">My Account</a></li>
+            <li><a href="{{ url_for('logout') }}">Logout</a></li>
+                {% else %}
+            <li><a href="{{ url_for('login') }}">Login</a></li>
+            <li><a href="{{ url_for('register') }}">Register</a></li>
+                {% endif %}
+        </ul>
+    </nav>
+        {% with messages = get_flashed_messages(with_categories=true) %}
+        {% for category, message in messages %}
+    <div class="flash {{ category }}">{{ message }}</div>
+        {% endfor %}
+        {% endwith %}
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+    <footer>
+        <p>© 2025 RZA Zoo</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% block content %}
+<h1 class="edu-title">Education Centre</h1>
+<div class="education-layout">
+<!-- LEFT IMAGES -->
+<div class="edu-images">
+    <img src="{{url_for('static', filename='images/zoo_an_5.jpg')}}" alt="Animal Activity" class="edu-img-box">
+    <img src="{{url_for('static', filename='images/zoo_an_6.jpg')}}" alt="More Animals" class="edu-img-box">
+    <img src="{{url_for('static', filename='images/zoo_an_7.jpg')}}" alt="Tour Guide" class="edu-img-box">
+</div>
+<!-- RIGHT-SIDE CONTENT -->
+    <div class="edu-text">
+    <h2>Education Resources (PDF)</h2>
+    <ul>
+        <li><a href="{{ url_for('animals_fact') }}" class="edu-link">Animal Fact Sheet</a></li>
+        <li><a href="#" class="edu-link">Conservation Booklet</a></li>
+        <li><a href="#" class="edu-link">School Trip Worksheet</a></li>
+    </ul>
+    <h2>Rules and Safety</h2>
+    <p class="edu-rules">
+            • Stay on marked paths<br>
+            • Keep noise levels low<br>
+            • Follow zookeeper instructions<br>
+            • No flash photography<br>
+    </p>
+        <h2>Extra Information</h2>
+    <p class="edu-extra">
+            Our educational programme supports schools and families with
+            wildlife learning, conservation awareness, and guided tour
+            experiences. Resources are updated monthly.
+    </p>
+</div>
+</div>
+{% endblock %}

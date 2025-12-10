@@ -1,0 +1,56 @@
+/* ABOUT PAGE STYLING      */
+
+.about-wrapper {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 20px 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 35px;
+ }
+ .about-text {
+    background: rgba(0,0,0,0.45);
+    padding: 25px;
+    border-radius: 12px;
+    line-height: 1.6;
+    font-size: 1.2rem;
+ }
+ .about-list {
+    margin-top: 15px;
+    padding-left: 20px;
+    list-style: none;
+ }
+ .about-list li {
+    margin: 12px 0;
+    padding-left: 25px;
+    position: relative;
+ }
+ .about-list li::before {
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+ }
+ /* RIGHT IMAGE CARD — MATCHES HOME FEATURE CARDS */
+ .about-image-card {
+    background: rgba(255,255,255,0.08);
+    backdrop-filter: blur(4px);
+    border-radius: 20px;
+    padding: 15px;
+    text-align: center;
+    transition: transform 0.25s ease, background 0.25s ease;
+ }
+ .about-image-card:hover {
+    transform: translateY(-6px);
+    background: rgba(255,255,255,0.15);
+ }
+ .about-image-card img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    border-radius: 15px;
+ }
+ .about-img-caption {
+    margin-top: 12px;
+    font-size: 1.1rem;
+    opacity: 0.9;
+ }

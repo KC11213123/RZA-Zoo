@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block content %}
+    <h1 class="section-title">About RZA Zoo</h1>
+    <div class="about-wrapper">
+    <!-- LEFT COLUMN (TEXT CONTENT) -->
+    <div class="about-text">
+        <p>
+                RZA Zoo is home to over 50 species from around the world.  
+                We focus on conservation, education, and providing guests with
+                unforgettable wildlife experiences.
+        </p>
+        <ul class="about-list">
+            <li>Safari-style animal habitats</li>
+            <li>On-site hotel & restaurant</li>
+            <li>School trips and guided tours</li>
+            <li>Educational learning centre</li>
+        </ul>
+        <p>
+                Our mission is to protect wildlife while inspiring future generations.
+        </p>
+    </div>
+    <!-- RIGHT COLUMN (IMAGE LIKE HOME PAGE STYLE) -->
+    <div class="about-image-card">
+        <img src="{{url_for('static', filename='images/zoo_an_4.jpg')}}" alt="">
+    <p class="about-img-caption">Explore our habitats</p>
+    </div>
+    </div>
+{% endblock %}

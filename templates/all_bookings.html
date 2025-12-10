@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block content %}
+  <h1>All Bookings</h1>
+  <ul>
+    {% for booking in bookings %}
+      <li>{{ booking.name }} - {{ booking.date }} - {{ booking.guests }} guests</li>
+    {% endfor %}
+  </ul>
+{% endblock %}

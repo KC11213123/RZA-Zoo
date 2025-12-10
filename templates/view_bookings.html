@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>All Bookings</h2>
+
+<table border="1" cellpadding="10">
+<tr>
+    <th>Name</th>
+    <th>Email</th>
+    <th>Date</th>
+    <th>Tickets</th>
+    <th>Actions</th>
+</tr>
+
+{% for booking in bookings %}
+    <tr>
+        
+        <td>{{ booking['name'] }}</td>
+        <td>{{ booking['email'] }}</td>
+        <td>{{ booking['date'] }}</td>
+        <td>{{ booking['tickets'] }}</td>
+
+        <td>
+            <a href="{{ url_for('edit_booking', id=booking['id']) }}">Edit</a> |
+            <a href="{{ url_for('delete_booking', id=booking['id']) }}">Delete</a>
+        </td>
+    </tr>
+{% endfor %}
+</table>
+{% endblock %}

@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Welcome, {{ user.username }}!</h1>
+{% if bookings %}
+   {% for b in bookings %}
+<div class="booking-item">
+<p>
+<strong>{{ b['name'] }}</strong><br>
+   Date: {{ b['date'] }}<br>
+   Tickets: {{ b['tickets'] }}<br>
+   Ticket Type: <strong>{{ b['ticket_type'] }}</strong>
+</p>
+<a href="{{ url_for('edit_booking', id=b['id']) }}" class="btn-acc-edit">Edit</a>
+<a href="{{ url_for('delete_booking', id=b['id']) }}" class="btn-acc-delete"
+   onclick="return confirm('Are you sure?');">
+   Delete
+</a>
+</div>
+   {% endfor %}
+{% else %}
+   <p>You have no bookings yet.</p>
+{% endif %}
+{% endblock %}

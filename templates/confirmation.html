@@ -1,0 +1,8 @@
+{% extends "base.html" %}
+{% block content %}
+  <h1>Booking Confirmed</h1>
+  <p>Thanks {{ name }}!</p>
+  <p>Your booking on <strong>{{ date }}</strong> for <strong>{{ tickets }}</strong> tickets ({{ ticket_type }}) is confirmed.</p>
+  <h2>Total Cost: £{{"%.2f" | format(total_cost)}}</h2>
+  <a href="{{ url_for('home') }}" class="btn-confirm-booking">Return Home</a>
+{% endblock %}

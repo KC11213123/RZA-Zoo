@@ -1,0 +1,68 @@
+/* ANIMAL FACTS PAGE        */
+
+
+.an1-title {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2.5rem;
+}
+
+/* Main layout container */
+.ani-layout {
+    width: 90%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    padding: 40px;
+    background: rgba(0,0,0,0.45);
+    border-radius: 12px;
+
+}
+
+/* Left image grid */
+.ani1-images {
+    display: grid;
+    width: 800px;
+    grid-template-columns: 1fr;
+    gap: 25px;
+}
+
+/* Image styling like teh home page */
+.ani-img-box {
+    width: 60%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 15px;
+    background: rgba(255,255,255,0.2);
+    border: 4px solid rgba(255,255,255,0.4);
+}
+
+/* Right-side text content */
+.ani-text h2 {
+    margin-top: 15px;
+    font-size: 1.4rem;
+}
+
+.ani-text {
+    font-size: 1.1rem;
+}
+
+
+/* Lists and paragraphs */
+.ani-text ul {
+    list-style: none;
+    padding: 0;
+}
+.ani-text li {
+    margin: 8px 0;
+}
+
+.ani-info, .ani-extra {
+    margin-top: 10px;
+    line-height: 1.6;
+}
+
+.animal-section {
+    margin-bottom: 60px;
+}
